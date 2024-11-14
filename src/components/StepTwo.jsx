@@ -6,10 +6,13 @@
 
 */
 
+//! Import des composants
+import Form from "./Form";
+
 //* Fonction StepTwo
 function StepTwo(props) {
   //Destructuring de props
-  const { userName, email, password } = props;
+  const { userName, email, password, setFormState } = props;
   console.log(props);
 
   //Return
@@ -30,6 +33,16 @@ function StepTwo(props) {
           <div>
             <p>Password : {password}</p>
           </div>
+        </div>
+
+        <div>
+          <button
+            onClick={() => {
+              setFormState(false);
+            }}
+          >
+            Edit your information
+          </button>
         </div>
       </section>
     </>
